@@ -89,14 +89,15 @@ prefer git. It's not installed by default so you have to do:
     git config --global user.name "Your Name"
 
 Now let's make a new project using our versioning system. Just type:
-
+    
+    mkdir myproject
     mkdir myproject.git
     git init --bare myproject.git
 
-Yay! Git is initialised in the new folder we created. We have a new project
-repository. Now we can clone this repository on our development machine, but
-first we need to do a little more configuring, to automatically deploy our
-code when we push it back to the ev3dev brick.
+Yay! Git is initialised in the new folder we created. You future commits will be
+deployed in /myproject. We have a new project repository. Now we can clone this 
+repository on our development machine, but first we need to do a little more
+configuring, to automatically deploy our code when we push it back to the ev3dev brick.
 
     nano myproject.git/hooks/post-receive
 
